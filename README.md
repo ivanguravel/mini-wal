@@ -64,3 +64,15 @@ All valid entries from WAL are applied to `db.txt`:
 
 After this procedure you may verify content of the `db.txt`. It contains all WAL entries applied safely and atomically.
 
+### What does fsync() do?
+- Blocks execution
+- Forces the disk driver to unload the buffer
+- Forces the disk itself to flush its internal cache
+- Waits for confirmation from the device
+- After that, the data is definitely on the drive.
+
+This is the first and foremost rule of robust systems:
+`If there was no fsync, the write does not exist.`
+
+
+
