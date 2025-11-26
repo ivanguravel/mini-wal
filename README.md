@@ -1,6 +1,6 @@
 # Mini WAL (Write-Ahead Log) Example in Python
 
-This is a simple Python example demonstrating `Write-Ahead Logging (WAL)`**` with:
+This is a simple Python example demonstrating `Write-Ahead Logging (WAL)` with:
 
 - Atomic commit using temporary file + rename
 - fsync for durability
